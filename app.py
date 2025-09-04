@@ -79,7 +79,7 @@ st.markdown("""
 st.markdown("""
 <div style='background-color: #fff3cd; padding: 10px; border-radius: 5px; margin-bottom: 20px; border: 1px solid #ffeeba;'>
 <h4 style='color: #856404; margin: 0;'>🔧 Demo Mode - JurneeGo Prototype</h4>
-<p style='color: #856404; margin: 5px 0 0 0; font-size: 14px;'>Production version includes AWS Bedrock Guardrails, DynamoDB persistence, and enterprise security</p>
+<p style='color: #856404; margin: 5px 0 0 0; font-size: 14px;'>Production version includes AWS Bedrock Guardrails and enterprise security</p>
 </div>
 """, unsafe_allow_html=True)
 
