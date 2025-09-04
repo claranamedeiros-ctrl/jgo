@@ -15,7 +15,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -23,6 +22,13 @@ try:
         st.session_state.env_loaded = True
 except Exception as e:
     print(f"Warning: Could not load .env file: {e}")
+
+try:
+    for key, value in st.secrets.items():
+        os.environ.setdefault(key, str(value))
+except Exception as e:
+    print(f"Warning: Could not load Streamlit secrets: {e}")
+
     
 if 'auth_manager' not in st.session_state:
     st.session_state.auth_manager = AuthManager()
